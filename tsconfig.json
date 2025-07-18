@@ -2,14 +2,10 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true, // ✅ 이거만 수정 권장
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -21,8 +17,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src",              // ✅ 전체 src 폴더 포함 권장
+    "src",
     "src/vite-env.d.ts"
-    
   ]
 }
