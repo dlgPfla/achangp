@@ -1,0 +1,20 @@
+/* src/components/OnboardingLayout.module.css */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appContainer {
+  width: 402px;
+  height: 874px;
+  background-color: #fff;
+  border-radius: 16px; /* 필요시 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

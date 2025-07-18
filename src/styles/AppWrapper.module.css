@@ -1,0 +1,30 @@
+/* AppWrapper.module.css */
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.appContainer {
+  width: 402px;
+  height: 874px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px; /* 선택사항 */
+  display: flex;
+  flex-direction: column;
+}
+body, button, input, textarea {
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+  font-size: 16px; /* ✅ Figma 기준 */
+  font-weight: 500; /* Medium */
+  line-height: 22px;
+  letter-spacing: 0;
+}

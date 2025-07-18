@@ -1,0 +1,749 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+* {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* min-height ❌ */
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 100px; /* 하단바 가림 방지 */
+  box-sizing: border-box;
+}
+
+/* 하단바는 container 안에 있고 고정 위치 아님 */
+.bottomNav {
+  height: 64px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 390px;
+   position: sticky;
+  bottom: 0;
+  z-index: 1;
+  /* ✅ margin 제거! */
+}
+
+.bottomNav img {
+  width: 24px;
+  height: 24px;
+}
+
+.centerButton {
+  width: 64px;
+  height: 64px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -32px;
+  z-index: 11;
+}
+
+.centerButton img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+/* 프로필 헤더 */
+.profileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+}
+
+.profileImage {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 12px;
+  flex: 1;
+}
+
+.iconGroup {
+  display: flex;
+  gap: 21px;
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  align-items: center;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  padding-right: 24px;
+  cursor: pointer;
+}
+
+/* 탭 메뉴 */
+.tabMenu {
+  display: flex;
+  width: 100%;
+  height: 41px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabButton {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tabButton.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 31px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 배너 */
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 287px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.arrowContainer {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 48px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  font-size: 12px;
+  color: white;
+  gap: 4px;
+  z-index: 10;
+}
+
+.arrowContainer img {
+  width: 8px;
+  height: 8px;
+}
+
+.arrowText {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+}
+
+/* 카테고리 */
+.categoryWrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 3px 16px;
+}
+
+.categoryPages {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 200%;
+}
+
+.categoryPage {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 30px;
+}
+.page0 {
+  transform: translateX(0%);
+}
+
+.page1 {
+  transform: translateX(-50%);
+}
+
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.categoryIcon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.categoryIcon img {
+  width: 20px;
+  height: 20px;
+}
+
+.categoryLabel {
+  font-size: 10px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* 도트 */
+.categoryDotsWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.categoryDots {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.dot {
+  width: 28px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  border: none;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* 추천 카드 */
+.infoCardWrapper {
+  padding: 20px 16px 0;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.infoCard {
+  width: 100%;
+  max-width: 360px;
+  height: 125px;
+  background-color: #FFFBF0;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.cardImage {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.cardTextContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F1F1F;
+  margin-bottom: 4px;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.cardDescription {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.cardArrow {
+  font-size: 18px;
+  color: #000;
+  flex-shrink: 0;
+}
+.recommendSection {
+  padding: 24px 16px 80px;
+  background-color: #fff;
+   padding-bottom: 0;  /* ✅ 확인 */
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+    margin-top: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.recommendCategoryTabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+
+.categoryTab {
+                /* ✅ 고정 너비 */
+  height: 25px;              /* ✅ 고정 높이 */
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 11px 5px 11px;  /* ✅ 위 6px, 아래 5px, 좌우 11px */
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+
+.categoryTab.active {
+  background-color: #FFEBAF;
+  font-weight: 600;
+}
+.productList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.productCard {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.productImage {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.productInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 100px); /* 이미지 공간 확보 */
+}
+.brand {
+  font-weight: 500;
+  color: #666;
+  font-size: 12px;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.price {
+    font-size: 15px;
+  font-weight: 0;
+  
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  gap: 8px;
+  
+}
+.priceRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px; /* 후기와 태그 간격 */
+  margin-top: 4px;
+}
+
+
+
+.discount {
+  color: #E66D68;
+  margin-left: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+.discount1 {
+  color: #E66D68;
+  margin-left: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 1px;
+  gap: 3px;
+}
+.rating {
+  font-size: 10px;
+  color: #666;
+  margin-bottom: 6px;
+}
+.reviewCount {
+  color: #aaa;
+  font-size: 10px;
+  gap: 6px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* ✅ 태그 간 간격 넓힘 */
+  align-items: center;
+}
+.tag {
+  background-color: #E7FFE2;
+  color: #4A753F;
+  font-size: 8px;
+  padding: 3px 6px;
+  border-radius: 999px;
+  white-space: nowrap;
+  line-height: 1;
+  
+}
+.tag.bad {
+  background-color: #FFE6E5;
+  color: #BF4E4E;
+}
+.reviewRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+.moreButton {
+  margin: 20px auto 2px;
+  display: block;
+  width: 332px;                 /* ✅ 버튼 너비 고정 (피그마 기준) */
+  height: 36px;                 /* ✅ 버튼 높이 고정 */
+  font-size: 13px;
+  color: #333333;               /* ✅ 텍스트 색: 검정 */
+  background-color: #ffffff;    /* ✅ 배경: 흰색 */
+  border: 1px solid #E5E5E5;    /* ✅ 테두리 색상: 연한 회색 */
+  border-radius: 5px;          /* ✅ 모서리 둥글게 */
+  text-align: center;
+  line-height: 36px;            /* ✅ 세로 정렬 */
+  cursor: pointer;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+.productListGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 12px;
+}
+.productCardColumn {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-family: 'Pretendard';
+}
+.productImageColumn {
+  width: 100%;
+height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.recommendRowSectio1 {
+  padding: 24px 16px;
+  background-color: #fff;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+
+.recommendRowSectio1 h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.productRow1 {
+  display: flex;
+  gap: 24px;           /* ✅ 카드 간 간격 확대 */
+  margin-top: 16px;
+  justify-content: space-between;
+}
+
+.productCard1 {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+
+.productImage1 {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.brand1 {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.name1 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.priceRow1 {
+  display: flex;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  align-items: center;
+}
+
+.discount1 {
+  color: #E66D68;
+  font-weight: 600;
+  font-size: 8px;
+}
+
+.reviewRow1 {
+  font-size: 11px;
+  color: #666;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+.reviewCount1 {
+  color: #aaa;
+}
+
+.tags1 {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.tag1 {
+  padding: 4px 8px;
+  font-size: 8px;
+  border-radius: 999px;
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.tag1.good {
+  background-color: #E7FFE2;
+  color: #4A753F;
+}
+
+.tag1.bad {
+  background-color: #FFE6E5;
+  color: #BF4E4E;
+}
+.sectionTitle1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 45px; /* ✅ 태그와 간격 확보용 */
+}
+
+.workingSection {
+  padding: 24px 16px;
+  background-color: #fff;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+
+.workingTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.workingTabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.workingTab {
+  padding: 6px 12px;
+  font-size: 11px;
+  border-radius: 14px;
+  background-color: #f5f5f5;
+  border: none;
+  color: #333;
+  font-family: 'Pretendard', sans-serif;
+  cursor: pointer;
+}
+
+.workingTab.active {
+  background-color: #FFEBAF;
+  font-weight: 600;
+}
+
+.workingProductList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.workingCard {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.workingImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.workingInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.workingBrand {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.workingName {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.workingPriceRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.workingPrice {
+  font-weight: 600;
+}
+
+.workingDiscount {
+  color: #E66D68;
+}
+
+.workingReview {
+  font-size: 10px;
+  color: #666;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.reviewCount {
+  color: #aaa;
+  font-size: 10px;
+}
+
+.tag {
+  background-color: #E7FFE2;
+  color: #4A753F;
+  font-size: 7px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+ 
+}
+.arrowButton {
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+  color: #5c3232;
+}
+.bad {
+  background-color: #FFE6E5;
+  color: #BF4E4E;
+}
+
+.workingMore {
+  margin: 20px auto 0;
+  font-size: 13px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+}

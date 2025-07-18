@@ -1,0 +1,322 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+* {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+.container {
+  padding: 20px 16px 40px;
+  background-color: #ffffff;
+  font-family: 'Pretendard', sans-serif;
+  color: #000000;
+  
+  overflow: visible; /* ✅ 이걸로 변경 */
+
+  
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 0 4px;
+}
+
+.backIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.rightIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 30px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.tipsBox {
+  background-color: #FFFBF0;
+  border-radius: 12px;
+  padding: 16px 27px; 
+  font-size: 11px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.tipTitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tipList {
+  list-style: decimal;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.tipList li {
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.subDescription {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 400;
+font-family: 'Pretendard', 'Spoqa Han Sans Neo', sans-serif;
+}
+.scrollWrapper {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #ffffff;
+padding-bottom: 200px;
+overflow-x: hidden;
+min-height: 100vh;
+}
+
+.strollerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+  margin-bottom: 60px; /* ✅ 기존 60~100px → 12px 정도로 축소 */
+}
+
+.strollerBox {
+  width: 335px;
+  border: 1px solid #FFEBAF;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+}
+
+.strollerTitle {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.strollerIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.strollerList {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.recommendSection {
+  margin-top: 5px;
+  padding: 0 30px 200px 30px;
+}
+
+.recommendTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  margin-top: 5px;
+}
+
+.recommendDesc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.productScroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px; /* 기존 12px → 8px로 더 촘촘하게 */
+  padding-bottom: 8px;
+}
+.productCard {
+  flex: 0 0 auto;
+  width: 100px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.productImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.brand {
+  font-size: 11px;
+  color: #999;
+  margin-top: 6px;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 2px;
+  line-height: 1.4;
+  height: 2.8em; /* 2줄 고정 */
+  overflow: hidden;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.rating {
+  font-size: 8px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.tags {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.greenTag {
+  background-color: #e3f7e4;
+  color: #1a8f00;
+  font-size: px;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.redTag {
+  background-color: #ffecec;
+  color: #d03b3b;
+  font-size: 4px;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.compareSection {
+  padding: 10px 20px 80px 0px; /* ✅ 왼쪽만 23px */
+  margin-top: 48px;
+}
+.compareTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  width: 100%;
+  justify-content: center; 
+  border-radius: 11.408px;
+}
+
+.compareTable {
+  width: max-content; /* 또는 1134px */
+  table-layout: fixed;
+  border-collapse: collapse;
+  
+}
+.compareTable th,
+.compareTable td {
+  border: 1px solid #f3ecec;
+  padding: 4px 6px;
+  text-align: center;        /* ✅ 수평 가운데 정렬 */
+  vertical-align: middle;    /* ✅ 수직 가운데 정렬 */
+  background-color: #fff;
+  font-size: 10px;
+  font-weight: 300%;
+  color: #333333;
+border-radius: 11px;
+}
+.compareTable thead th:first-child,
+.compareTable tbody td:first-child {
+  width: 84px;
+  min-width: 84px;
+  max-width: 84px;
+ background-color: #FFFBF0;  /* ✅ 연노랑 배경 */
+  font-weight: 300%;
+  color: #333;
+}
+.compareTable th:not(:first-child),
+.compareTable td:not(:first-child) {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  word-break: keep-all;
+  
+}
+
+.compareTable th {
+  background-color: #FFFBEF;
+  font-weight: 300%;
+  
+}
+
+.greenTag,
+.redTag {
+  display: inline-block;
+  font-size: 9px;
+  padding: 4px 4px;
+  border-radius: 999px;
+  margin: 5px 3px 2px 0;
+  font-weight: 300%;
+}
+
+.greenTag {
+  background-color: #e3f7e4;
+  color: #1a8f00;
+}
+
+.redTag {
+  background-color: #ffecec;
+  color: #d03b3b;
+}

@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 874px;     /* ✅ 실제 아이폰 디자인 높이 */
+  max-height: 874px;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: 'Inter', 'Apple SD Gothic Neo', sans-serif;
+  width: 402px;
+  height: 874px;
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+  justify-content: flex-start; /* 상단 정렬 */
+  padding-bottom: 24px; /* 또는 하단 여백 고정 */
+}
+
+/* 상태바 (아이폰 기준 402 x 41) */
+.statusBar {
+  height: 41px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 상단 헤더 (회원가입 bar, 402 x 69) */
+.header {
+  height: 69px;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.backIcon {
+  position: absolute;
+  left: 16px;     /* ← Figma 기준 */
+  top: 25px;      /* ← Figma 기준 */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* 메인 영역 */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 67px; /* 헤더 아래 글씨 간격 */
+}
+.titleGroup {
+  text-align: center;
+  margin-bottom: 67px; /* 버튼과의 간격 */
+}
+
+.titleLine1 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Pretendard', sans-serif;
+  line-height: 26px;
+  color: #000;
+}
+
+.titleLine2 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Pretendard', sans-serif;
+  line-height: 26px;
+  color: #000;
+  margin-top: 7px;
+}
+
+
+/* 텍스트 위치: X 99, Y 185 (정중앙 맞춤용 마진 조정) */
+.title {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 500; /* Medium */
+  line-height: 1.4; /* 22 * 1.4 = 30.8px */
+  color: #000;
+  text-align: center;
+  margin-bottom: 67px; /* 버튼과 간격 */
+  white-space: pre-line; /* 줄바꿈 유지 */
+}
+.titleText {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/* 버튼 그룹: 버튼 크기 317x51, 간격 14px */
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+  max-width: 317px;
+}
+
+/* 버튼 스타일 */
+.button {
+  width: 317px;
+  height: 51px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #E6E6E6;
+  background-color: #fff;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* 안내 텍스트 박스 (305 x 57), 위치 Y: 784 */
+.footer {
+  position: absolute;
+  bottom: 33px; /* (874 - 784 - 57 = 33) 기준 맞춰 정확하게 */
+  width: 305px;
+  height: 57px;
+  background-color: #F6F6F6;
+  color: #9a9a9a;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 12px 16px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  margin-top: auto;         /* 위 요소와 최대한 벌어지게 */
+  margin-bottom: 33px;
+
+}

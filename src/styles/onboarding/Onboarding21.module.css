@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: 'Inter', 'Apple SD Gothic Neo', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.backIcon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.titleText {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 48px;
+  text-align: center;
+  flex: 1;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 51px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  font-weight: 500;
+  width: 93px;
+  height: auto;
+  text-align: center; /* ✅ 텍스트 중앙 정렬 */
+}
+.card span {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  height: 18px;       /* ✅ Figma 기준 */
+  width: 75px;        /* ✅ Figma 기준 */
+  text-align: center;
+}
+
+.card img.icon {
+  width: 35px;      /* 카드 크기에 맞춰 확대 */
+  height: 35px;
+  object-fit: contain; /* 🔥 핵심: 비율 유지하면서 꽉 채우기 */
+}
+
+.selected {
+  background-color: #fff6d6;
+  border-color: #ffe089;
+}
+
+.nextBtn {
+  width: calc(100% - 48px);
+  max-width: 360px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.nextBtn.active {
+  background-color: #ffe89f;
+  color: #000;
+}
+
+.skipBtn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 32px;
+}

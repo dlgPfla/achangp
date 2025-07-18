@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 874px;     /* ✅ 실제 아이폰 디자인 높이 */
+  max-height: 874px;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: 'Inter', 'Apple SD Gothic Neo', sans-serif;
+  width: 402px;
+  height: 874px;
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+  justify-content: flex-start; /* 상단 정렬 */
+  padding-bottom: 24px; /* 또는 하단 여백 고정 */
+}
+
+/* 상태바 (아이폰 기준 402 x 41) */
+.statusBar {
+  height: 41px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 상단 헤더 (회원가입 bar, 402 x 69) */
+.header {
+  height: 69px;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.backIcon {
+  position: absolute;
+  left: 16px;     /* ← Figma 기준 */
+  top: 25px;      /* ← Figma 기준 */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.title {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 500; /* Medium */
+  line-height: 1.4; /* 22 * 1.4 = 30.8px */
+  color: #000;
+  text-align: center;
+  margin-bottom: 51px; /* 버튼과 간격 */
+  white-space: pre-line; /* 줄바꿈 유지 */
+}
+.titleText {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  padding-top: 48px;
+  text-align: center;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.options {
+  display: flex;
+  gap: 17px;
+  margin-bottom: auto;
+}
+
+.optionButton {
+  width: 144px;         /* 🔥 고정 너비 */
+  height: 64px;         /* 🔥 고정 높이 */
+  padding: 12px 24px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.optionButton.selected {
+  background-color: #fff6d6;
+  border-color: #ffeb90;
+}
+
+.nextBtn {
+  width: 305px;
+  height: 51px;
+  margin: 40px auto;
+  background-color: #f6f6f6;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  line-height: 51px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.nextBtn.active {
+  background-color: #ffe89f; /* 노란색 */
+  color: #000;
+}

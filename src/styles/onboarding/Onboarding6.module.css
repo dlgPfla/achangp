@@ -1,0 +1,172 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 874px;     /* ✅ 실제 아이폰 디자인 높이 */
+  max-height: 874px;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: 'Inter', 'Apple SD Gothic Neo', sans-serif;
+  width: 402px;
+  height: 874px;
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+  justify-content: flex-start; /* 상단 정렬 */
+  padding-bottom: 24px; /* 또는 하단 여백 고정 */
+}
+
+/* 상태바 (아이폰 기준 402 x 41) */
+.statusBar {
+  height: 41px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 상단 헤더 (회원가입 bar, 402 x 69) */
+.header {
+  height: 69px;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.backIcon {
+  position: absolute;
+  left: 16px;     /* ← Figma 기준 */
+  top: 25px;      /* ← Figma 기준 */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.title {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 500; /* Medium */
+  line-height: 1.4; /* 22 * 1.4 = 30.8px */
+  color: #000;
+  text-align: center;
+  margin-bottom: 67px; /* 버튼과 간격 */
+  white-space: pre-line; /* 줄바꿈 유지 */
+}
+.titleText {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 48px;
+  text-align: center;
+  flex: 1;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 61px;
+  margin-bottom: 51px;
+  text-align: center;
+  white-space: pre-line;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  font-weight: 500;
+  width: 93px;
+  height: auto;
+  text-align: center; /* ✅ 텍스트 중앙 정렬 */
+}
+.card span {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 22px;
+  height: 18px;       /* ✅ Figma 기준 */
+  width: 75px;        /* ✅ Figma 기준 */
+  text-align: center;
+}
+
+
+.card img.icon {
+  width: 32px;      /* 카드 크기에 맞춰 확대 */
+  height: 32px;
+  object-fit: contain; /* 🔥 핵심: 비율 유지하면서 꽉 채우기 */
+}
+
+.selected {
+  background-color: #fff6d6;
+  border-color: #ffe089;
+}
+
+.nextBtn {
+  width: 305px;
+  height: 51px;
+  background-color: #f6f6f6;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  line-height: 51px;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 auto;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.nextBtn.active {
+  background-color: #ffe89f; /* 노란색 */
+  color: #000;
+}
+.fixedBottom {
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  
+  border-top: 1px solid #eee;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+width: 402px;
+padding: 24px 49px 26px 48px;
+justify-content: center;
+align-items: center;
+
+}
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  
+  padding: 0 24px 24px;
+  box-sizing: border-box;
+}

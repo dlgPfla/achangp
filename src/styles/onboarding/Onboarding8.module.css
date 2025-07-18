@@ -1,0 +1,237 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 874px;     /* ✅ 실제 아이폰 디자인 높이 */
+  max-height: 874px;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: 'Inter', 'Apple SD Gothic Neo', sans-serif;
+  width: 402px;
+  height: 874px;
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+  justify-content: flex-start; /* 상단 정렬 */
+  padding-bottom: 24px; /* 또는 하단 여백 고정 */
+}
+
+/* 상태바 (아이폰 기준 402 x 41) */
+.statusBar {
+  height: 41px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 상단 헤더 (회원가입 bar, 402 x 69) */
+.header {
+  height: 69px;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.backIcon {
+  position: absolute;
+  left: 16px;     /* ← Figma 기준 */
+  top: 25px;      /* ← Figma 기준 */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.title {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 500; /* Medium */
+  line-height: 1.4; /* 22 * 1.4 = 30.8px */
+  color: #000;
+  text-align: center;
+  margin-bottom: 67px; /* 버튼과 간격 */
+  white-space: pre-line; /* 줄바꿈 유지 */
+}
+.titleText {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 48px;
+  text-align: center;
+  flex: 1;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 61px;
+  margin-bottom: 70px;
+  text-align: center;
+  white-space: pre-line;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 13px;    /* 가로 간격 */
+  row-gap: 55px;       /* 세로 간격 */
+  width: 100%;
+  max-width: 320px;
+  margin-top: 24px;
+}
+
+.card {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.card span {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  height: 18px;       /* ✅ Figma 기준 */
+  width: 75px;        /* ✅ Figma 기준 */
+  text-align: center;
+}
+.imageWrapper {
+  padding: 0; /* ✅ 여백 제거 */
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
+
+
+.nextBtn {
+  width: 305px;
+  height: 51px;
+  background-color: #f6f6f6;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  line-height: 51px;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 ;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.nextBtn.active {
+  background-color: #ffe89f; /* 노란색 */
+  color: #000;
+}
+.fixedBottom {
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  justify-content: center;
+  border-top: 1px solid #eee;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+   display: flex; 
+width: 402px;
+ padding: 24px 16px 26px 16px;
+justify-content: center;
+align-items: center;
+
+}
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  
+  padding: 0 24px 24px;
+  box-sizing: border-box;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 309px;
+  height: 42px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 9px 13px 9px 15px;
+  box-sizing: border-box;
+  margin: 0 auto 24px auto;
+  background-color: #fff;
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #000;
+  background-color: transparent;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+.brandCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;      /* 이미지와 텍스트 사이 간격 */
+  width: 93px;
+}
+.brandImage {
+  max-width: 100%;
+  max-height: 100%;
+ 
+  object-fit: contain;
+  display: block;
+}
+.brandLabel {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  width: 93px;
+  padding: 4px 0;
+  border-radius: 8px;
+  background-color: transparent; /* 기본 배경 없음 */
+  transition: background-color 0.3s;
+}
+.selected .brandLabel {
+  background-color: #fff6d6; /* ✅ 연노랑 */
+}

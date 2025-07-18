@@ -1,0 +1,13 @@
+/* global styles */
+/* global.css 또는 index.css에 추가 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 스크롤 안 생기게 */
+}

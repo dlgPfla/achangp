@@ -1,0 +1,203 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 874px;     /* ✅ 실제 아이폰 디자인 높이 */
+  max-height: 874px;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: 'Inter', 'Apple SD Gothic Neo', sans-serif;
+  width: 402px;
+  height: 874px;
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+  justify-content: flex-start; /* 상단 정렬 */
+  padding-bottom: 24px; /* 또는 하단 여백 고정 */
+}
+
+/* 상태바 (아이폰 기준 402 x 41) */
+.statusBar {
+  height: 41px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 상단 헤더 (회원가입 bar, 402 x 69) */
+.header {
+  height: 69px;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.backIcon {
+  position: absolute;
+  left: 16px;     /* ← Figma 기준 */
+  top: 25px;      /* ← Figma 기준 */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.title {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 500; /* Medium */
+  line-height: 1.4; /* 22 * 1.4 = 30.8px */
+  color: #000;
+  text-align: center;
+  margin-bottom: 67px; /* 버튼과 간격 */
+  white-space: pre-line; /* 줄바꿈 유지 */
+}
+.titleText {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+  width: 100%;
+  flex: 1;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 51px;
+}
+
+.profileGenderRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.profileWrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.profileImage {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+   margin-bottom: 8px
+}
+
+.cameraIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 37px;
+  height: 37px;
+  Left: 50px;
+  Padding: 8px;
+}
+
+.profileGenderRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.genderButtonsRow {
+  display: flex;
+  gap: 13px; /* 버튼 사이 간격 */
+ 
+}
+
+.gender {
+  width: 88px;
+  height:48px;
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.3s ease;
+  
+}
+
+.selected {
+  background-color: rgba(255, 232, 159, 0.3); /* #FFEB9F 30% */
+  border-color: #FFEB9F;
+}
+
+.input {
+  width: 100%;
+  max-width: 300px;
+  height: 63px;
+  border-radius: 10px;
+  border: 0.5px solid #CDCDCD;
+  padding: 23px 152px 22px 26px; /* ← Figma 기준 */
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+.addChild {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-size: 14px;
+  margin: 24px 0;
+}
+
+.addChild img {
+  width: 24px;
+  height: 24px;
+}
+
+.addText {
+  font-size: 14px;
+  color: #000;
+}
+
+.submitBtn {
+  width: calc(100% - 48px * 2); /* 좌우 여백 감안 */
+  max-width: 305px;             /* Figma 기준 width */
+  height: 51px;
+  margin: 10px auto 39px;       /* 상단 여백 10px, 하단 여백 39px */
+  background-color: #f6f6f6;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  display: block;
+  text-align: center;
+  line-height: 51px;            /* 텍스트 수직 정렬 */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submitBtn.active {
+  background-color: #ffe89f;
+  color: #000;
+}
